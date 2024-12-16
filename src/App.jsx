@@ -16,14 +16,14 @@ function App() {
       setLoading(true);
       setError(null);
 
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=imperial`;
+      const url = 'https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=imperial';
 
       const response = await fetch(url);
       const data = await response.json();
       setWeatherData(data);
 
       const foreCastresponse = await fetch(
-        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}&units=imperial`
+        'https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}&units=imperial'
       );
       const forecastdata = await foreCastresponse.json();
 
